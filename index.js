@@ -21,12 +21,14 @@ function playRound (humanChoice, computerChoice) {
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
         humanScore += 1;
         console.log("You Win! scissors beats paper");
+    } else {
+        console.log("you draw!")
     }
 }
 
 
 function playGame() {
-    for (i = 0; i <= 5;  i++) {
+    for (let i = 0; i <= 4;  i++) {
         const humanSelection =  getHumanChoice();
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
